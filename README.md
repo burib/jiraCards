@@ -6,10 +6,10 @@ nodeJS powered jiraCard printer using JIRA's REST API
 #### edit config.json
  ```json
     {
-        host: 'jira.mycompany.com',
-        username: 'myAwesomeUserName',
-        password: 'myAwesomePassword',
-        ticketKeys: [
+        "host": "jira.mycompany.com",
+        "username": "myAwesomeUserName",
+        "password": "myAwesomePassword",
+        "ticketKeys": [
             "COP-7896",
             "COP-7899"
         ]
