@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <title>jiraCards</title>
+    <link rel="stylesheet" href="css/foundation.min.css">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+    <div class="row">
+            {% for card in cards %}
+
+                {% if loop.first %}
+                <div class="row">
+                {% endif %}
+
+
+                <div class="large-6 columns">
+                    <div class="callout panel">
+                        <h1 class="card-key">{{ card.key }} <span class="card-estimation">{{ card.estimation }}</span></h1>
+                        <h3 class="card-title">{{ card.title | title }}</h3>
+                        <img src="{{ card.assignee.avatar }}" alt="{{ card.assignee.name }}" class="card-assignee-avatar" width="48" height="48"/>
+                        <strong class="card-assignee-name">{{ card.assignee.name }}</strong>
+                    </div>
+                </div>
+
+                {% if loop.index % 2 == 0 %}
+                </div><div class="row">
+                {% endif %}
+
+                {% if loop.index % 8 == 0 %}
+                <div class="page-break"></div>
+                {% endif %}
+
+            {% endfor %}
+    </div>
+    <script>
+        window.print();
+    </script>
+</body>
+</html>

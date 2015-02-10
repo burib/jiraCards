@@ -1,0 +1,9 @@
+{
+    host: 'jira.mycompany.com',
+    username: 'myAwesomeUserName',
+    password: 'myAwesomePassword',
+    ticketKeys: [
+        "COP-7896",
+        "COP-7899"
+    ]
+}

@@ -1,0 +1,54 @@
+.row {
+    max-width: 7.27in;
+}
+
+.row .row {
+    margin: 0 auto;
+}
+
+.column, .columns {
+    padding: 0;
+}
+
+.card-key {
+    border-bottom: 1px solid #000;
+    font-size: 3.3rem;
+}
+
+    .card-key .card-estimation {
+        font-size: 1rem;
+        line-height: 3rem;
+        float: right;
+    }
+
+.card-title {
+    height: 76px;
+    overflow: hidden;
+}
+
+.panel.callout {
+    height: 6.3cm;
+    margin: 1px;
+}
+
+.page-break {
+    border-bottom: 1px solid #AAAAAA;
+    margin: 0.75rem 0;
+}
+
+.panel.callout {
+    border-color: #000;
+    background-color: transparent;
+    margin: 0;
+}
+
+@media print {
+    .large-6 {
+        width: 50%;
+    }
+
+    .page-break {
+        page-break-after: always;
+        border-bottom: 0;
+    }
+}
