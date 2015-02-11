@@ -12,7 +12,6 @@ var request = require('request'),
     numberOfRequests = 0;
 
 tickets.forEach(function (value) {
-    console.log(url + value);
     request({
         url: url + value,
         strictSSL: false,
