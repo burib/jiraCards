@@ -1,7 +1,7 @@
 var request = require('request'),
     fs = require('fs'),
     swig = require('swig'),
-    config = require('config.json'),
+    config = require('./config.json'),
     host = config.host,
     restPath = config.restPath || "/rest/api/latest/issue/",
     userName = config.username,
@@ -11,8 +11,8 @@ var request = require('request'),
     cards = [],
     numberOfRequests = 0;
 
-
 tickets.forEach(function (value) {
+    console.log(url + value);
     request({
         url: url + value,
         strictSSL: false,

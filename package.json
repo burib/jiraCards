@@ -6,7 +6,7 @@
   "author": "BuriB",
   "license": "ISC",
   "dependencies": {
-    "request": "^2.51.0",
+    "request": "^2.53.0",
     "swig": "^1.4.2"
   }
 }
