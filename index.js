@@ -11,6 +11,8 @@ var request = require('request'),
     cards = [],
     numberOfRequests = 0;
 
+process.env.NO_PROXY = host;
+
 tickets.forEach(function (value) {
     request({
         url: url + value,
@@ -25,8 +27,8 @@ tickets.forEach(function (value) {
                 estimation: toDaysAndHours(body.fields.timetracking.originalEstimateSeconds),
                 description: body.fields.description,
                 assignee: {
-                    name: body.fields.assignee.displayName,
-                    avatar: body.fields.assignee.avatarUrls["48x48"]
+                    name: body.fields.assignee && body.fields.assignee.displayName,
+                    avatar: body.fields.assignee && body.fields.assignee.avatarUrls["48x48"]
                 }
             });
         } else {
