@@ -1,3 +1,8 @@
+@page {
+    size: auto;   /* auto is the initial value */
+    margin: 10mm 0;  /* this affects the margin in the printer settings */
+}
+
 .row {
     max-width: 7.27in;
 }
@@ -15,11 +20,11 @@
     font-size: 3.3rem;
 }
 
-    .card-key .card-estimation {
-        font-size: 1rem;
-        line-height: 3rem;
-        float: right;
-    }
+.card-key .card-estimation {
+    font-size: 1rem;
+    line-height: 3rem;
+    float: right;
+}
 
 .card-title {
     height: 76px;
